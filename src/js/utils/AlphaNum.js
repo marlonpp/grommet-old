@@ -27,7 +27,7 @@ module.exports = {
         if (c == aa[x] && d == bb[x]) {
           return c - d;
         } else {
-          return (aa[x] > bb[x]) ? 1 : -1;  
+          return (aa[x] > bb[x]) ? 1 : -1;
         }
       }
     }

@@ -1,4 +1,5 @@
 // (C) Copyright 2014-2015 Hewlett-Packard Development Company, L.P.
+'use strict';
 
 module.exports = {
   findScrollParents: function (element) {

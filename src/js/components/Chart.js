@@ -79,8 +79,7 @@ var Chart = React.createClass({
     }
 
     if ('bar' === this.props.type) {
-      /*jshint -W083 */
-      for (var i=0; i<maxValuesLength; i++) {
+      for (var i = 0; i < maxValuesLength; i++) {
         var sumY = 0;
         series.forEach(function (item) {
           sumY += item.values[i][1];
@@ -170,14 +169,14 @@ var Chart = React.createClass({
     var paths = [];
 
     var step = BASE_WIDTH / this.state.bounds.steps;
-    for (var i=0; i<=BASE_WIDTH; i = i + step) {
+    for (var i = 0; i <= BASE_WIDTH; i = i + step) {
       paths.push(
         <path key={i} fill="none" d={"M" + i + ",0L" + i + "," + BASE_HEIGHT} />
       );
     }
 
     step = BASE_HEIGHT / 5;
-    for (i=BASE_HEIGHT; i>=0; i = i - step) {
+    for (i = BASE_HEIGHT; i >= 0; i = i - step) {
       paths.push(
         <path key={1000 + i} fill="none" d={"M0," + i + "L" + BASE_WIDTH + "," + i} />
       );
@@ -234,8 +233,7 @@ var Chart = React.createClass({
     var step = BASE_WIDTH / this.state.bounds.steps;
     var bars = [];
 
-    /*jshint -W083 */
-    for (var i=0; i<this.state.bounds.steps; i++) {
+    for (var i = 0; i < this.state.bounds.steps; i++) {
       var baseY = this.state.bounds.minY;
       var stepBars = this.props.series.map(function (item, index) {
         var colorIndex = item.colorIndex || ('graph-' + (index + 1));

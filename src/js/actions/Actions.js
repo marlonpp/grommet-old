@@ -13,8 +13,12 @@ var Actions = Reflux.createActions({
 
 Actions.login.listen(function(username, password) {
   var thisAction = this;
-  Rest.post('/rest/login-sessions',
-    {authLoginDomain: 'LOCAL', userName: username, password: password, loginMsgAck: true})
+  Rest.post('/rest/login-sessions', {
+      authLoginDomain: 'LOCAL',
+      userName: username,
+      password: password,
+      loginMsgAck: true
+    })
     .end(function(err, res) {
       if (err) {
         return thisAction.failed(err, res.body);

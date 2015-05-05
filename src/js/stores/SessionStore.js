@@ -4,10 +4,10 @@ var Reflux = require('reflux');
 var Actions = require('../actions/Actions');
 var Cookies = require('../utils/Cookies');
 
-var TOKEN = "token";
-var USER = "user";
-var LOGIN_TIME = "loginTime";
-var EMAIL = "email";
+var TOKEN = 'token';
+var USER = 'user';
+var LOGIN_TIME = 'loginTime';
+var EMAIL = 'email';
 
 var SessionStore = Reflux.createStore({
 

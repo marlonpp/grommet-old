@@ -1,6 +1,6 @@
 var del = require('del');
 var react = require('gulp-react');
-var jshint = require('gulp-jshint');
+var eslint = require('gulp-eslint');
 var gulpWebpack = require('gulp-webpack');
 var file = require('gulp-file');
 var runSequence = require('run-sequence');
@@ -93,11 +93,9 @@ module.exports = function(gulp, opts) {
     (options.jsAssets || []).forEach(function(jsAsset) {
       gulp.src(jsAsset)
         .pipe(react())
-        .pipe(jshint())
-        .pipe(jshint.reporter('default', {
-          verbose: true
-        }))
-        .pipe(jshint.reporter('fail'));
+        .pipe(eslint())
+        .pipe(eslint.formatEach())
+        .pipe(eslint.failOnError());
     });
   });
 

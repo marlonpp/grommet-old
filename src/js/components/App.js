@@ -13,12 +13,12 @@ var App = React.createClass({
   },
 
   render: function() {
-    var classes = ["app"];
+    var classes = ['app'];
     if (this.props.centered) {
-      classes.push("app--centered");
+      classes.push('app--centered');
     }
     if (this.props.inline) {
-      classes.push("app--inline");
+      classes.push('app--inline');
     }
     if (this.props.className) {
       classes.push(this.props.className);
